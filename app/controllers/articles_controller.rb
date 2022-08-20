@@ -1,4 +1,7 @@
 class ArticlesController < ApplicationController
+
+  http_basic_authenticate_with name: "admin", password: "password", except: [:index, :show]
+
   def index
     @articles = Article.all
   end
@@ -39,7 +42,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     @article.destroy
 
-    redirect_to root_path, status: :see_otherarticles/5
+    redirect_to root_path, status: :see_other
   end
 
   private
