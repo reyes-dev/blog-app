@@ -1,3 +1,7 @@
-<h1>Edit Article</h1>
-
-<%= render "form", article: @article %>
+<div class="edit_main">
+  <h1>Edit Article</h1>
+  <div class="edit_main_form">
+    <%= render "form", article: @article %>  
+  </div>
+</div>
+<%= render 'shared/sidebar' %>

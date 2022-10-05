@@ -1,3 +1,9 @@
-<h1>New Article</h1>
+<div class="new_main">
+  <h1 class="new_article">New Article</h1>
 
-<%= render "form", article: @article %>
+  <div class="article_form">
+    <%= render "form", article: @article %>
+  </div>
+</div>
+
+<%= render 'shared/sidebar' %>
