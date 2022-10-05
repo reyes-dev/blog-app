@@ -7,10 +7,12 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @articles = Article.all
     @article = Article.find(params[:id])
   end
 
   def new
+    @articles = Article.all
     @article = Article.new
   end
 
@@ -25,6 +27,7 @@ class ArticlesController < ApplicationController
   end
 
   def edit
+    @articles = Article.all
     @article = Article.find(params[:id])
   end
 
